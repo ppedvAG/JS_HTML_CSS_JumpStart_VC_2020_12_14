@@ -1,0 +1,71 @@
+/* Typselektor */
+p{
+    /* color: blue; */
+    font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
+    /* font-style: italic; */
+   /* font-weight: bold; */
+   /* text-decoration: underline; */
+}
+
+/* Klassenselektor */
+.demo-p{
+    color: lightskyblue;
+}
+
+
+
+/* 
+    .demo-p{
+        color: chartreuse;
+    }
+*/
+
+/* ID-Selektor */
+#demo-id-01{
+    color: red;
+}
+
+#demo-id-02{
+    color: gold;
+}
+
+/* ************************************************************** */
+/* Links */
+
+/* LoVe/HAte  link - visited - hover - active */
+
+a{
+    text-decoration: none;
+}
+
+a:link{
+    color: aqua;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 34px;
+}
+
+a:visited{
+    color: chartreuse;
+}
+
+a:hover{
+    color: gold;
+}
+
+a:active{
+    color: darkorange;
+}
+
+
+.demo-div{
+    /* height: 100px; */
+    width: 200px;
+    background-color: darkorchid;
+}
+
+.demo-div2{
+    color: white;
+    font-size: 34px;
+    background-color: darkslategrey;
+}
+

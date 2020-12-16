@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>functions</title>
+    <style>
+        body{
+            /* background-color: cadetblue; */
+        }
+
+        div{
+            border: 2px solid black;
+            padding: 1rem;
+        }
+
+        .btn-demo{
+            /* button styling */
+            margin-top: 1rem;
+        }
+        /* 
+        .demo05:hover{
+            background-color: aqua;
+        }
+        */
+
+    </style>
+</head>
+<body>
+
+    <div id="demo01" class="demo01" onclick="setBgCol()"></div>
+    <div id="demo02" class="demo02"></div>
+    <div id="demo03" class="demo03"></div>
+    <div id="demo04" class="demo04"></div>
+    <div id="demo05" class="demo05"></div>
+    <button id="btn-ok" class="btn-demo">OK</button>
+    <button id="btn-test">Test</button>
+    <input type="text" id="inp-test">
+
+
+    <script>
+
+        /* 
+            häufige Events:
+                onclick
+                onmouseover
+                onmouseout
+                onchange
+                oninput
+                onkeydown/onkeypress
+                onkeyup
+                onfocus
+                onblur
+                onscroll        
+        */
+
+        var x = 5;
+        var demoDiv01 = document.getElementById('demo01');
+        var demoDiv02 = document.getElementById('demo02');
+        var demoDiv03 = document.getElementById('demo03');
+        var demoDiv04 = document.getElementById('demo04');
+        var demoDiv05 = document.getElementById('demo05');
+        var btnOK = document.getElementById('btn-ok');
+        var btnTest = document.getElementById('btn-test');
+        
+        
+
+
+        function setBgCol(){
+            // toller Code
+            demoDiv01.style.backgroundColor = 'chartreuse';
+        }
+
+        // function call (Funktionsaufruf)
+
+        // setBgCol();
+
+
+        demoDiv02.addEventListener('click', setBgCol);
+
+
+
+       /*  
+
+            // anonyme Funktion:
+
+            demoDiv03.addEventListener('click', function(){
+                // toller Code
+                demoDiv03.style.backgroundColor = 'blue';
+            }); 
+        */
+
+            // etwas kürzer:
+
+        demoDiv03.addEventListener('click', function(){
+            // toller Code
+            this.style.backgroundColor = 'blue';
+        });
+
+
+        btnOK.addEventListener('click', function(){
+            // toller Code
+            demoDiv04.innerHTML = 'Hallo!';
+        });
+
+
+
+        // Parameter übergeben
+
+        function demoCalc(a, b){
+            return a * b;
+        }
+
+
+        console.log(demoCalc(3, 5));
+
+        function testFunction(obj){
+            obj.style.backgroundColor = 'aqua';
+        }
+
+
+        btnTest.addEventListener('click', function(){
+            testFunction(demoDiv04);
+        });
+
+
+        demoDiv05.addEventListener('mouseover', function(){
+            this.style.backgroundColor = 'aqua';
+        });
+        
+        demoDiv05.addEventListener('mouseout', function(){
+            this.style.backgroundColor = 'initial';
+        });
+
+
+
+
+        var inpTest = document.getElementById('inp-test');
+
+        var inp = inpTest.value;
+    </script>
+    
+</body>
+</html>

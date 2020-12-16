@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schleifen</title>
+    <style>
+        :root {
+            font-size: 20px;
+        }
+
+        .demo {
+            border: 1px solid black;
+            padding: 1rem;
+            width: 20rem;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="demo" class="demo"></div>
+    <button id="btn-while">While</button>
+    <button id="btn-for">For</button>
+
+    <script>
+
+        var text = '';
+        var demoDiv = document.getElementById('demo');
+        var btnWhile = document.getElementById('btn-while');
+        var btnFor = document.getElementById('btn-for');
+
+        /* Schleifen */
+        /* While-Schleife */
+
+
+
+        function whileTest() {
+            // meistens werden wir bei 0 zu zählen beginnen
+            // aber abhängig von dem, was wir ausgeben wollen, dürfen wir natürlich
+            // auch andere Startwerte verwenden!
+
+            var i = 1;
+            while (i < 11) {
+                // solange i kleiner ist als 10, führe diesen tollen Code aus
+                text += '<p>' + 'Die Schleife wurde ' + i + ' Mal ausgeführt.' + '</p>';
+                // i = i + 1;
+                // i += 1;
+                i++;
+            }
+
+            demoDiv.innerHTML = text;
+        }
+
+        btnWhile.addEventListener('click', whileTest);
+
+
+
+        /* For-Schleife */
+
+        function forTest(){
+
+            // auch hier ist unser Startwert normalerweise 0
+            // aber auch hier können wir mit anderen Startwerten beginnen
+            // ... und auch von oben nach unten zählen!
+            for(var j = 10; j > 0; j--){
+                text += '<p>' + 'Zähler steht auf ' + j + '.' + '</p>';
+            }
+            
+            demoDiv.innerHTML = text;
+
+        }
+
+        btnFor.addEventListener('click', forTest);
+
+
+
+
+    </script>
+</body>
+
+</html>

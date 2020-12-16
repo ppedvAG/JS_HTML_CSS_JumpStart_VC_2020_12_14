@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            font-size: 20px;
+        }
+
+        body{
+            margin: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 3rem;
+        }
+        .r1, .r2{
+            /* border: 1px solid black; */
+            padding: 1rem;
+            width: 20rem;
+        }
+
+        .r2{
+            text-align: center;
+        }
+        .output{
+            /* border: 1px solid red; */
+            width: 3rem;
+            padding: 1rem;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="r1">
+            <label for="slider">Range:</label>
+            <span id="minVal" class= output></span>
+            <input id="slider" type="range" min="0" max="100" value="50">
+            <span id="maxVal" class="output"></span>
+        </div>
+        <div class="r2">
+            <span id="inpVal" class="output"></span>
+        </div>
+    </div>
+
+    <!-- <input type="text" id="test"> -->
+
+
+    <script>
+
+        var slider = document.getElementById('slider');
+        var minVal = document.getElementById('minVal');
+        var maxVal = document.getElementById('maxVal');        
+        var inpVal = document.getElementById('inpVal');
+
+
+        minVal.innerHTML = slider.getAttribute('min');
+        maxVal.innerHTML = slider.getAttribute('max');
+        // inpVal.innerHTML = slider.value; // für Defaultwert
+        inpVal.innerHTML = slider.getAttribute('value'); // wenn value-Attribut als Startwert gesetzt ist
+
+        
+
+        function outputTest(){
+            inpVal.innerHTML = slider.value;
+        }
+
+        slider.addEventListener('input', outputTest);
+
+            /* 
+
+            // oder mit anonymer Funktion:
+            slider.addEventListener('input', function(){
+                inpVal.innerHTML = slider.value;
+            }); 
+            
+            */
+
+
+            // document.getElementById('test').value = slider.value;
+
+
+
+    </script>
+
+</body>
+</html>

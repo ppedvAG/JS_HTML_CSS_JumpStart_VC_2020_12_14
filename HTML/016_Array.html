@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+    <style>
+        :root {
+            font-size: 20px;
+        }
+
+        .class-demo {
+            border: 1px solid black;
+            padding: 1rem;
+            width: 20rem;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="btn-fruits">OK</button>
+    <button onclick="addMango()">addMango</button>
+    <button onclick="deleteLast()">deleteLast</button>
+    <button onclick="spliceDemo()">splice</button>
+    <button onclick="sortDemo()">sort</button>
+    <button onclick="concatDemo()">allFruits</button>
+    
+    <div id="demo" class="class-demo"></div>
+    <div class="class-demo"></div>
+    <div class="class-demo"></div>
+    <div class="class-demo"></div>
+
+
+
+    <script>
+
+        var demoDiv = document.getElementById('demo');
+        var btnOK = document.getElementById('btn-fruits');
+
+        var fruitSalad = ['Banane', 'Apfel', 'Kiwi'];
+        // Stelle im Array       0         1        2
+        // length                1         2        3
+
+
+        console.log(fruitSalad[1]);
+
+        btnOK.addEventListener('click', function(){
+            demoDiv.innerHTML = '<p>' + fruitSalad.join(', ') + '</p>';
+        });
+
+        function addMango(){
+            fruitSalad.push('Mango');
+            demoDiv.innerHTML = '<p>' + fruitSalad.join(', ') + '</p>';
+        }
+
+        
+        function deleteLast(){
+            fruitSalad.pop();
+            demoDiv.innerHTML = '<p>' + fruitSalad.join(', ') + '</p>';
+        }
+
+        
+        
+        function spliceDemo(){
+            fruitSalad.splice(1, 0, 'Birne', 'Weintrauben');
+            demoDiv.innerHTML = '<p>' + fruitSalad.join(', ') + '</p>';
+        }
+
+        function sortDemo(){
+            fruitSalad.sort();
+            demoDiv.innerHTML = '<p>' + fruitSalad.join(', ') + '</p>';
+
+        }
+
+        var allFruits = [];
+
+        var citrusFruits = ['Orange', 'Mandarine', 'Kumquat'];
+
+        function concatDemo(){
+            allFruits = fruitSalad.concat(citrusFruits); 
+            demoDiv.innerHTML = '<p>' + allFruits.join(', ') + '</p>';
+        }
+
+        // zwei Arrays zusammenfügen
+
+
+
+        // Array wird auch erstellt, wenn wir getElementsByClassName verwenden
+        // auch dann, wenn nur 1 Element in diesem Array drin ist!
+        
+        var classDemo = document.getElementsByClassName('class-demo');
+
+        for(var i = 0; i < classDemo.length;  i++){
+            classDemo[i].style.backgroundColor = 'lightblue';
+        }
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

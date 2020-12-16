@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Basics</title>
+    <!-- <link rel="stylesheet" href="../CSS/main.css"> -->
+    <!-- <script src="../JS/main.js" defer></script> -->
+
+    <style>
+        .demo{
+            padding: 2rem;
+            border: 2px solid blue;
+            /* background-color: blue; */
+        }
+
+        .red{
+            padding: 2rem;
+            border: 2px solid red;
+            min-height: 1em;
+        }
+        .green{
+            padding: 2rem;
+            border: 2px solid green;
+            min-height: 1em;
+        }
+
+    </style>
+</head>
+<Body>
+    
+    <div id="demo" class="demo">
+        <p>Hallo!</p>
+        <p>Nochmaaaal!</p>
+    </div>
+
+    <div id="red" class="red"></div>
+
+    <div id="green" class="green"></div>
+
+    <script>
+        // einzeilige Kommentare
+        /* 
+            mehrzeilige
+            Kommentare
+        */
+
+        /* 
+
+            // verschachtelte Kommentare
+
+        */
+
+
+        /* Variablen */
+        /* Variablendeklaration */
+
+
+        var x;
+
+        /* mehrere auf einmal deklarieren */
+
+        var text, firstName, z;
+
+
+        /* Initialisierung */
+
+        x = 5;
+
+        /* Deklaration und Initialisierung zusammenfassen */
+
+        var y = 3;
+
+
+        /* Konstanten */
+        /* 
+            const MwSt = 0.19;
+        */
+
+        
+        // console.log('Hallo!');
+
+        // console.log(x);
+
+        console.log('Der aktuelle Wert von x ist ' + x + '.');
+
+        console.log("Hallo!" + x + " Das ist der Wert von x.");
+
+        console.log('Das ist ein "String".');
+        console.log("Das ist ein 'String'.");
+
+
+        x = x + 5;
+
+        console.log('Der aktuelle Wert von x ist ' + x + '.');
+
+        
+        // x = x + 5;
+        // oder kürzer:
+
+            x += 5;
+
+        console.log('Der aktuelle Wert von x ist ' + x + '.');
+
+            // x = x + 1;
+            // x += 1;
+            // oder kürzer:
+
+            x++;
+
+            console.log('Der aktuelle Wert von x ist ' + x + '.');
+
+            // console.log(x++);
+
+        /* Operatoren */
+        /* 
+            +, -, *, /
+            ++, --         increment, decrement
+            +=, -=, *=, /=
+
+            %    Modulus-Operator  Bsp.: 10 % 2 = 0
+
+
+            // Vergleichsoperatoren
+
+                ==, !=, <=, >=
+                ===, !==     - fragt auch den Datentyp ab
+
+            // logische Operatoren
+
+                &&         //logisches UND
+                ||         //loisches ODER
+                !          // logisches NICHT       
+        
+        */
+
+        var a = 5;
+        var b = '5';
+        console.log(a == b); // true oder false?? TRUE!!!
+
+        console.log(a === b); // false
+
+
+        /* 
+            Datentypen
+
+            number (Zahl)
+
+                5
+                -5
+                5.3
+                5.12345678909876543234567876543
+                123e5 (Exponentialschreibweise) 12300000
+                123e-5 0.00123
+
+
+            string (Text)
+
+                'Text'
+                "Text"
+                'das ist ein "String"'
+                "das ist ein 'String'"
+
+
+            boolean
+                true/false
+
+            
+            object
+
+            undefined (noch nicht definiert)     
+        
+        */
+
+
+        console.log(typeof x);
+        console.log(typeof b);
+
+        console.log(isNaN(x));
+
+
+        firstName = 'James';
+        var lastName = 'Bond';
+
+        var fullName = firstName + ' ' + lastName;
+
+
+        console.log('Vollständiger Name ist: ' + fullName + '.');
+
+
+        console.log(x+y);
+
+
+
+        var demoDiv = document.getElementById('demo');
+
+        console.log(typeof demoDiv);
+
+
+        console.log(demoDiv.innerHTML);
+        console.log(demoDiv.innerText);
+
+
+        demoDiv.style.backgroundColor = 'lightblue';
+
+
+        var redDiv = document.getElementById('red');
+
+        redDiv.innerHTML = 'Super, Test hat funktioniert!';
+
+
+        redDiv.innerHTML += '<p>' + 'Das ist Text innerhalb eines Paragraphen.' + '</p>';
+
+        redDiv.innerHTML += '<p>' + 'Der vollständige Name lautet: ' + fullName + '.' + '</p>';
+
+
+        var greenDiv = document.getElementById('green');
+
+        greenDiv.innerHTML = demoDiv.innerHTML;
+
+        greenDiv.style.color = 'green';
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelle</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            font-size: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 0 auto;
+        }
+
+        td,
+        th {
+            border: 1px solid white;
+            padding: .5rem 2rem;
+        }
+
+        td {
+            background-color: rgb(224, 239, 253);
+        }
+
+        th {
+            color: white;
+            background-color: dodgerblue;
+            font-family: 'Architects Daughter', sans-serif;
+            font-size: 1.4rem;
+        }
+
+        .td-demo{
+            text-align: right;
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+    <table>
+        <caption>Obstlager</caption>
+        <thead>
+            <tr>
+                <th>Obst</th>
+                <th>Anzahl</th>
+                <th>Preis</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Zeile 1 -->
+            <tr>
+                <!-- table row (Zeile) -->
+                <td>Apfel</td><!-- table data (Eintrag) -->
+                <td class="td-demo">150</td>
+                <td class="td-demo">0.12</td>
+            </tr>
+            <!-- Zeile 2 -->
+            <tr>
+                <td>Banane</td>
+                <td class="td-demo">200</td>
+                <td class="td-demo">0.20</td>
+            </tr>
+
+            <!-- Zeile 3 -->
+            <tr>
+                <td>Kiwi</td>
+                <td class="td-demo">50</td>
+                <td class="td-demo">0.50</td>
+            </tr>
+
+            <!-- Zeile 4 -->
+            <tr>
+                <td>Mango</td>
+                <td class="td-demo">20</td>
+                <td class="td-demo">2.99</td>
+            </tr>
+            <!-- Zeile 5 -->
+            <!-- <tr>
+                <td>Drachenfrucht</td>
+                <td class="td-demo">20</td>
+                <td class="td-demo">5.99</td>
+            </tr> -->
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">&copy; Leos Tabelle</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+
+</html>

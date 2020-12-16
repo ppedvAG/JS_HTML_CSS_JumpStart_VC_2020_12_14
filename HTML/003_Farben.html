@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farben</title>
+    <style>
+        body {
+            /* background-color: fuchsia; */
+        }
+
+        div {
+            height: 200px;
+            width: 200px;
+            margin-bottom: 20px;
+            font-size: 44px;
+            /*  color: white; */
+        }
+
+        .demo01 {
+            background-color: aqua;
+        }
+
+        .demo02 {
+            background-color: rgb(0, 255, 255);
+        }
+
+        /* 
+            RGB-Schreibweise
+                                    r    g    b
+                                  red   green  blue
+                                  0       0      0     .......... schwarz
+                                 255     255     255   .......... weiß
+                                 143     143     143   .......... Grauschattierung
+                                 255      0       0    .......... red
+                                  0      255      0    .......... green
+                                  0       0      255   .......... blue
+
+        */
+
+
+        .demo03 {
+            background-color: #00ffff;
+        }
+
+        /* 
+            Hex-Schreibweise
+                                    00ffff
+
+                                    _  _      _  _     _  _
+
+                                     r          g        b
+
+                                     0123456789  A   B   C   D   E   F
+                                                 10  11  12  13  14  15
+
+                                     15*16^0  + 15*16^1 = 255        
+        
+        
+        
+        */
+
+
+
+        .demo04 {
+            background-color: hsl(180, 100%, 50%);
+        }
+
+        .demo05 {
+            background-color: rgba(0, 255, 255, 0.5);
+        }
+
+        .demo06 {
+            background-color: aqua;
+            opacity: 0.3;
+        }
+
+        .demo07 {
+            background-color: aqua;
+            /* visibility: hidden; */
+        }
+
+        .demo08 {
+            background-color: aqua;
+            display: none;
+        }
+
+        .demo09 {
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="demo01">1</div>
+    <div class="demo02">2</div>
+    <div class="demo03">3</div>
+    <div class="demo04">4</div>
+    <div class="demo05">5</div>
+    <div class="demo06">6</div>
+    <div class="demo07">7</div>
+    <div class="demo08">8</div>
+    <div class="demo09">9</div>
+</body>
+
+</html>

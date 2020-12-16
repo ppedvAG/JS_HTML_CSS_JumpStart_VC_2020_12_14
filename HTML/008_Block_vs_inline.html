@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block vs inline</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .demo-div {
+            height: 100px;
+            background-color: dodgerblue;
+        }
+
+        .span-demo{
+            color: greenyellow;
+        }
+
+        .img-container{
+             
+            /* border: 3px solid red; */
+            /*
+            background-color: red;
+             */
+            width: 25%;
+            /* height: 100px; */
+        }
+
+        .img-container>img{
+            display: block;
+            width: 100%;
+            /* height: 100%; */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="demo-div">Das ist ein Div.</div>
+    <p>
+        Das ist ein <a href="https://en.wikipedia.org/wiki/Paragraph" target="_blank">Paragraph.</a> 
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus aut nam, in et dolores sit commodi quasi
+        natus repellendus quo molestias totam, assumenda saepe similique tenetur autem maiores voluptatem tempora
+        provident consectetur voluptate? Velit culpa pariatur odio doloremque voluptatibus rerum cumque accusamus,
+        perspiciatis asperiores ipsam amet ipsa, quibusdam tempora debitis, excepturi corporis? Quidem, quod? Sint qui
+        earum tenetur possimus veniam fugit hic <strong>voluptatem</strong> <em>consequatur?</em>  <span class="span-demo">Ipsam, voluptas facilis.</span>  Accusantium quibusdam
+        tenetur praesentium quidem exercitationem nobis. Voluptas, veniam. Dolorem aspernatur debitis consectetur non
+        veniam, animi, unde corporis ipsa odit tenetur sint amet eligendi iusto praesentium ad soluta numquam. Minima,
+        voluptates tempore? Corrupti officiis numquam earum ipsam suscipit amet excepturi, distinctio autem aliquid quas
+        sed modi fuga sit repellendus sint possimus neque inventore, accusamus voluptatibus sapiente exercitationem.
+        Culpa qui deleniti perferendis natus voluptate. Soluta reprehenderit ratione eos doloremque vitae unde, rem
+        ipsam sequi totam sint aspernatur voluptatem incidunt repellat quos quis ad dicta commodi neque natus esse
+        perferendis iusto quaerat. Necessitatibus eius maxime praesentium assumenda nam aliquam. Sint laboriosam
+        cupiditate, consequuntur perferendis velit consequatur qui quaerat accusantium sunt ad ratione ut officiis.
+        Facilis impedit necessitatibus sapiente sequi architecto saepe accusamus, eius, quibusdam, magnam ut cupiditate?
+        Fugiat, sequi vel? Amet aperiam esse ad facilis.
+    </p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <label for="">Vorname: </label>
+    <input type="text">
+    <label for="">Nachname: </label>
+    <input type="text">
+    <label for="">Passwort: </label>
+    <input type="password">
+
+    <img src="../images/cat.jpg" alt="cat">
+    <img src="../images/cat2.jpg" alt="cat">
+    <img src="../images/cat3.jpg" alt="cat">
+
+
+
+    <h1>Bilder</h1>
+
+    <div class="img-container">
+        <img src="../images/cat2.jpg" alt="cat">
+    </div>
+   <!--  
+    <div class="img-container">
+        <img src="../images/cat3.jpg" alt="cat">
+    </div> -->
+
+</body>
+
+</html>

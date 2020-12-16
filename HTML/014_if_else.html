@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if-else</title>
+    <style>
+        :root{
+            font-size: 20px;
+        }
+
+        .output{
+            border: 1px solid black;
+            padding: 1rem;
+            width: 10rem;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="inp-num">
+    <div id="output-div" class="output"></div>
+
+
+    <script>
+        var x = 7;
+        var inpNum = document.getElementById('inp-num');
+        var outputDiv = document.getElementById('output-div');
+        
+
+/* 
+        if(x == 5){
+            // toller Code
+            alert('X hat den Wert 5.');
+        }
+        else if(x < 5){
+            // toller Code
+            alert('X ist kleiner als 5.');
+        }
+        else if(x > 5){
+            // toller Code
+            alert('X ist größer als 5.');
+        }
+        else{
+            // toller Code
+            alert('Fehlermeldung.');
+        }
+
+ */
+
+        function checkVal(){
+
+            var inp = parseInt(inpNum.value);
+
+            if(inp > 10){
+                outputDiv.innerHTML= '<p>Wert ist größer als 10.</p>';
+            }
+            else if(inp < 10){
+                outputDiv.innerHTML= '<p>Wert ist kleiner als 10.</p>';
+            }
+            else if(inp === 10){
+                outputDiv.innerHTML= '<p>Wert ist genau 10.</p>';
+            }
+            else{
+                outputDiv.innerHTML= 'Bitte geben Sie eine Zahl ein.';
+            }
+        }
+
+
+        inpNum.addEventListener('keyup', checkVal);
+
+
+
+        /* 
+
+            // Kurzschreibweise, wenn wir nur die Möglichkeit true oder false haben
+            // nur 1 Bedingung abgefragt:
+
+            (x === 5) ? alert(true) : alert(false);
+        
+        */
+
+
+    </script>
+</body>
+</html>
